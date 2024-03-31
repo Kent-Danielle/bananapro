@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Form{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row centered-form">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="text-center">My Form</h3>
+                    <form action="{% url 'formProcess' %}" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="size">Size:</label>
+                            <input type="number" class="form-control" id="size" name="size" step="0.25" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="weight">Weight:</label>
+                            <input type="number" class="form-control" id="weight" name="weight" step="0.25" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sweetness">Sweetness:</label>
+                            <input type="number" class="form-control" id="sweetness" name="sweetness" step="0.25"
+                                   required>
+                        </div>
+                        <div class="form-group">
+                            <label for="softness">Softness:</label>
+                            <input type="number" class="form-control" id="softness" name="softness" step="0.25"
+                                   required>
+                        </div>
+                        <div class="form-group">
+                            <label for="harvestTime">Harvest Time:</label>
+                            <input type="number" class="form-control" id="harvestTime" name="harvestTime" step="0.25"
+                                   required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ripeness">Ripeness:</label>
+                            <input type="number" class="form-control" id="ripeness" name="ripeness" step="0.25"
+                                   required>
+                        </div>
+                        <div class="form-group">
+                            <label for="acidity">Acidity:</label>
+                            <input type="number" class="form-control" id="acidity" name="acidity" step="0.25" required>
+                        </div>
+                        <button type="submit" class="btn btn-yellow btn-block">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
