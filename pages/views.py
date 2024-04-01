@@ -45,7 +45,7 @@ def formProcess(request):
 
 
 def results(request, size, weight, sweetness, softness, harvestTime, ripeness, acidity):
-    with open('C:\\Users\\kentc\\Documents\\Term 4\\BigData_COMP4949\\Sandbox\\hw2\\stacked_model_pkl', 'rb') as f:
+    with open('C:\\Users\\kentc\\Documents\\Term 4\\BigData_COMP4949\\Sandbox\\hw2\\knn_pkl', 'rb') as f:
         model = pickle.load(f)
 
     with open('C:\\Users\\kentc\\Documents\\Term 4\\BigData_COMP4949\\Sandbox\\hw2\\scaler_pkl', 'rb') as f:

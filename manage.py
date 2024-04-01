@@ -2,7 +2,6 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-from stacked_model import StackedModel
 
 def main():
     """Run administrative tasks."""
